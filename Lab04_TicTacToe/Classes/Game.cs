@@ -36,6 +36,7 @@ namespace Lab04_TicTacToe.Classes
             PlayerTwo.Name = "P2";
             PlayerOne.Marker = "X";
             PlayerTwo.Marker = "O";
+            PlayerOne.IsTurn = true;
             int i = 0;
             bool someoneWon = false;
             while (someoneWon == false && i < 9){
