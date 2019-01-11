@@ -23,7 +23,7 @@ namespace Lab04_TicTacToe.Classes
 			Position desiredCoordinate = null;
 			while (desiredCoordinate is null)
 			{
-				Console.WriteLine("Please select a location");
+				Console.WriteLine($"Please select a location");
 				Int32.TryParse(Console.ReadLine(), out int position);
 				desiredCoordinate = PositionForNumber(position);
 			}
@@ -50,8 +50,13 @@ namespace Lab04_TicTacToe.Classes
 			}
 		}
 
-	
-		public void TakeTurn(Board board)
+        internal static void TakeTurn(object board)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void TakeTurn(Board board)
 		{
 			IsTurn = true;
 

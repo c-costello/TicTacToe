@@ -6,7 +6,9 @@ namespace Lab04_TicTacToe.Classes
 {
 	class Game
 	{
-		public Player PlayerOne { get; set; }
+        private object game;
+
+        public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
 		public Player Winner { get; set; }
 		public Board Board { get; set; }
@@ -30,7 +32,26 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Winner</returns>
 		public Player Play()
 		{
+            PlayerOne.Name = "P1";
+            PlayerTwo.Name = "P2";
+            PlayerOne.Marker = "X";
+            PlayerTwo.Marker = "O";
+            PlayerOne.IsTurn = true;
+            PlayerTwo.IsTurn = false;
+            int i = 0;
+            while (i < 10){
+                Board.DisplayBoard();
+                PlayerOne.TakeTurn(Board);
+                Board.DisplayBoard();
+                i++;
+                PlayerTwo.TakeTurn(Board);
+                i++;
+            }
+            Board.DisplayBoard();
 
+
+
+            
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
             /*
@@ -83,8 +104,10 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
-				// TODO:  Determine a winner has been reached. 
-				// return true if a winner has been reached. 
+                // TODO:  Determine a winner has been reached. 
+                
+                // return true if a winner has been reached. 
+                
 			
 			}
 
