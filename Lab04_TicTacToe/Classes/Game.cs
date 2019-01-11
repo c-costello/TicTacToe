@@ -40,7 +40,12 @@ namespace Lab04_TicTacToe.Classes
             while (i < 10){
                 Board.DisplayBoard();
                 NextPlayer().TakeTurn(Board);
+                CheckForWinner(Board);
                 SwitchPlayer();
+                string[] testArr = { "X", "X", "X" };
+                string[] testArrTwo = { "X", "X", "X" };
+
+
                 i++;
             }
             Board.DisplayBoard();
@@ -99,13 +104,25 @@ namespace Lab04_TicTacToe.Classes
 				string a = Board.GameBoard[p1.Row, p1.Column];
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
+               
 
                 // TODO:  Determine a winner has been reached. 
-                
+                if ( a == "X" && b == "X" && c == "X")
+                {
+                    Console.WriteLine("Winner!");
+                    return true;
+
+                }
+                if (a == "O" && b == "O" && c == "O")
+                {
+                    Console.WriteLine("Winner!");
+                    return true;
+
+                }
                 // return true if a winner has been reached. 
-                
-			
-			}
+
+
+            }
 
 			return false;
 		}
