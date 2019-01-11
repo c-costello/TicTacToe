@@ -37,18 +37,19 @@ namespace Lab04_TicTacToe.Classes
             PlayerOne.Marker = "X";
             PlayerTwo.Marker = "O";
             int i = 0;
-            while (i < 10){
+            bool someoneWon = false;
+            while (someoneWon == false && i < 9){
                 Board.DisplayBoard();
                 NextPlayer().TakeTurn(Board);
-                CheckForWinner(Board);
-                SwitchPlayer();
-                string[] testArr = { "X", "X", "X" };
-                string[] testArrTwo = { "X", "X", "X" };
-
-
+                someoneWon = CheckForWinner(Board);
+                SwitchPlayer();              
                 i++;
             }
             Board.DisplayBoard();
+            if (i == 9)
+            {
+                Console.WriteLine("It's a draw!");
+            }
 
 
 
