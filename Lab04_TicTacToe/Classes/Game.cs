@@ -36,15 +36,11 @@ namespace Lab04_TicTacToe.Classes
             PlayerTwo.Name = "P2";
             PlayerOne.Marker = "X";
             PlayerTwo.Marker = "O";
-            PlayerOne.IsTurn = true;
-            PlayerTwo.IsTurn = false;
             int i = 0;
             while (i < 10){
                 Board.DisplayBoard();
-                PlayerOne.TakeTurn(Board);
-                Board.DisplayBoard();
-                i++;
-                PlayerTwo.TakeTurn(Board);
+                NextPlayer().TakeTurn(Board);
+                SwitchPlayer();
                 i++;
             }
             Board.DisplayBoard();
