@@ -12,17 +12,45 @@ namespace tictactoeTests
         {
             Player p1 = new Player();
             Player p2 = new Player();
-            Game gamee = new Game(p1, p2);
+            Game game = new Game(p1, p2);
 
-            gamee.Board.GameBoard = new string[,]
+            game.Board.GameBoard = new string[,]
             {
                 {"X", "X", "X"},
                 {"X", "X", "X"},
                 {"X", "X", "X"},
             };
 
-            Assert.True(gamee.CheckForWinner(gamee.Board));
+            Assert.True(game.CheckForWinner(game.Board));
 
         }
+        [Fact]
+        public void WillReturnNoWinner()
+        {
+            Player p1 = new Player();
+            Player p2 = new Player();
+            Game gamee = new Game(p1, p2);
+
+            gamee.Board.GameBoard = new string[,]
+            {
+                {"1", "2", "O"},
+                {"4", "X", "6"},
+                {"O", "8", "X"},
+            };
+
+            Assert.False(gamee.CheckForWinner(gamee.Board));
+
+        }
+        [Fact]
+        public void WillSwitchToPlayerTwo()
+        {
+            Player p1 = new Player();
+            Player p2 = new Player();
+            Game game = new Game(p1, p2);
+            game.PlayerOne.IsTurn = true;
+            Assert.Equal(game.PlayerTwo, game.SwitchPlayer());
+
+        }
+
     }
 }

@@ -140,7 +140,7 @@ namespace Lab04_TicTacToe.Classes
 		/// <summary>
 		/// End one players turn and activate the other
 		/// </summary>
-		public void SwitchPlayer()
+		public Player SwitchPlayer()
 		{
 			if (PlayerOne.IsTurn)
 			{
@@ -149,11 +149,13 @@ namespace Lab04_TicTacToe.Classes
 
               
 				PlayerTwo.IsTurn = true;
+                return PlayerTwo;
 			}
 			else
 			{
 				PlayerOne.IsTurn = true;
 				PlayerTwo.IsTurn = false;
+                return PlayerOne;
 			}
 		}
 
