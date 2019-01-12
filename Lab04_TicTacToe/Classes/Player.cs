@@ -68,12 +68,16 @@ namespace Lab04_TicTacToe.Classes
 			if (Int32.TryParse(board.GameBoard[position.Row, position.Column], out int _))
 			{
 				board.GameBoard[position.Row, position.Column] = Marker;
+
                 
                 
 			}
 			else
 			{                
-				Console.WriteLine("This space is already occupied");                             
+				Console.WriteLine("This space is already occupied");
+                board.DisplayBoard();
+                TakeTurn(board);
+
 			}
 		}
 	}
