@@ -36,7 +36,8 @@ namespace Lab04_TicTacToe.Classes
 		{
 			switch (position)
 			{
-				case 1: return new Position(0, 0); // Top Left
+				case 1:
+                    return new Position(0, 0); // Top Left
 				case 2: return new Position(0, 1); // Top Middle
 				case 3: return new Position(0, 2); // Top Right
 				case 4: return new Position(1, 0); // Middle Left
