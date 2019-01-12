@@ -111,13 +111,13 @@ namespace Lab04_TicTacToe.Classes
                 // TODO:  Determine a winner has been reached. 
                 if ( a == "X" && b == "X" && c == "X")
                 {
-                    Console.WriteLine("Winner!");
+                    Console.WriteLine("Player One Wins!");
                     return true;
 
                 }
                 if (a == "O" && b == "O" && c == "O")
                 {
-                    Console.WriteLine("Winner!");
+                    Console.WriteLine("Player Two Wins!");
                     return true;
 
                 }
