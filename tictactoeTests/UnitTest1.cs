@@ -51,6 +51,16 @@ namespace tictactoeTests
             Assert.Equal(game.PlayerTwo, game.SwitchPlayer());
 
         }
+        [Fact]
+        public void WillSwitchToPlayerOne()
+        {
+            Player p1 = new Player();
+            Player p2 = new Player();
+            Game game = new Game(p1, p2);
+            game.PlayerTwo.IsTurn = true;
+            Assert.Equal(game.PlayerOne, game.SwitchPlayer());
+
+        }
 
     }
 }
