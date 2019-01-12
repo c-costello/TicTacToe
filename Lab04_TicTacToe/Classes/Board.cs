@@ -16,7 +16,9 @@ namespace Lab04_TicTacToe.Classes
 			{"7", "8", "9"},
 		};
 
-
+        /// <summary>
+        /// Runs through a for loop to display the most current GameBoard
+        /// </summary>
 		public void DisplayBoard()
 		{
 
