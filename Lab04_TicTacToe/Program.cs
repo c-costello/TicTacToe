@@ -5,6 +5,11 @@ namespace Lab04_TicTacToe
 {
     public class Program
     {
+        /// <summary>
+        /// Runs a switch statement to start game or exit
+        /// sets up players, instantiates game board, calls game.Play();
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         { 
             Start:
@@ -22,7 +27,7 @@ namespace Lab04_TicTacToe
                     Player winner = game.Play();
                     if (winner != null)
                     {
-                        Console.WriteLine($"{winner} wins!");
+                        Console.WriteLine($"{winner.Name} wins!");
                     }
                     break;
 

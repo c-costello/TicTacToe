@@ -31,7 +31,11 @@ namespace Lab04_TicTacToe.Classes
 
 		}
 
-
+        /// <summary>
+        /// Takes in a position given by a player (a number 1 - 9) and returns the corresponding positon on the game board
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns></returns>
 		public static Position PositionForNumber(int position)
 		{
 			switch (position)
@@ -51,12 +55,16 @@ namespace Lab04_TicTacToe.Classes
 			}
 		}
 
+        
         internal static void TakeTurn(object board)
         {
             throw new NotImplementedException();
         }
 
-
+        /// <summary>
+        /// Runs GetPosition, sets player marker to equal the selected board game position
+        /// </summary>
+        /// <param name="board"></param>
         public void TakeTurn(Board board)
 		{
 			IsTurn = true;
