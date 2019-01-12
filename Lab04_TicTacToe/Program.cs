@@ -3,9 +3,9 @@ using Lab04_TicTacToe.Classes;
 
 namespace Lab04_TicTacToe
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         { 
             Start:
                 Console.WriteLine("Would you like to play a game?");
@@ -29,18 +29,7 @@ namespace Lab04_TicTacToe
                 default:
                     Console.Clear();
                     goto Start;
-                    
-
-
             }
-
- 
-
-
-
-
-        }
-            
-        
+        }        
     }
 }

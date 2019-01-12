@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-	class Game
+	public class Game
 	{
         private object game;
 
@@ -122,11 +122,9 @@ namespace Lab04_TicTacToe.Classes
 
                 }
                 // return true if a winner has been reached. 
-
-
             }
-
 			return false;
+
 		}
 
 
