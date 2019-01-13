@@ -48,7 +48,8 @@ namespace tictactoeTests
             Player p2 = new Player();
             Game game = new Game(p1, p2);
             game.PlayerOne.IsTurn = true;
-            Assert.Equal(game.PlayerTwo, game.SwitchPlayer());
+            game.SwitchPlayer();
+            Assert.Equal(game.PlayerTwo, game.NextPlayer());
 
         }
         [Fact]
@@ -58,7 +59,8 @@ namespace tictactoeTests
             Player p2 = new Player();
             Game game = new Game(p1, p2);
             game.PlayerTwo.IsTurn = true;
-            Assert.Equal(game.PlayerOne, game.SwitchPlayer());
+            game.SwitchPlayer();
+            Assert.Equal(game.PlayerOne, game.NextPlayer());
 
         }
         //    //TO DO - Find out why Assert.Equal isn't working
