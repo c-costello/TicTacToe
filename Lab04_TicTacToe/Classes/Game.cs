@@ -46,13 +46,13 @@ namespace Lab04_TicTacToe.Classes
                 NextPlayer().TakeTurn(Board);
                 someoneWon = CheckForWinner(Board);
                 SwitchPlayer();
-                Console.Clear();
-                
+                i++;                
             }
             Console.WriteLine();
             Board.DisplayBoard();
             if (someoneWon == true)
             {
+                SwitchPlayer();
                 return NextPlayer();
             }
             if (i == 9)
@@ -117,7 +117,6 @@ namespace Lab04_TicTacToe.Classes
 
                 if ( a == "X" && b == "X" && c == "X")
                 {
-                    Console.WriteLine("Player One wins!");
                     return true;                }
                 if (a == "O" && b == "O" && c == "O")
                 {

@@ -21,5 +21,3 @@ A fun tic tac toe game. Enter a number corresponding to which block you want to 
 ### Sample Game Play
 
 ### Winning Screen 
-
-## Credits
