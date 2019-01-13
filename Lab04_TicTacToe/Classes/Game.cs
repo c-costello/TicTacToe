@@ -111,9 +111,7 @@ namespace Lab04_TicTacToe.Classes
 				string a = Board.GameBoard[p1.Row, p1.Column];
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
-               
 
-                // TODO:  Determine a winner has been reached. 
                 if ( a == "X" && b == "X" && c == "X")
                 {
                     Console.WriteLine("Player One wins!");
