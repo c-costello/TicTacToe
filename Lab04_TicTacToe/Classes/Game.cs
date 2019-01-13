@@ -41,12 +41,15 @@ namespace Lab04_TicTacToe.Classes
             int i = 0;
             bool someoneWon = false;
             while (someoneWon == false && i < 9){
+                Console.WriteLine();
                 Board.DisplayBoard();
                 NextPlayer().TakeTurn(Board);
                 someoneWon = CheckForWinner(Board);
                 SwitchPlayer();
+                Console.Clear();
                 
             }
+            Console.WriteLine();
             Board.DisplayBoard();
             if (someoneWon == true)
             {

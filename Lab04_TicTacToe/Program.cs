@@ -29,7 +29,8 @@ namespace Lab04_TicTacToe
                     {
                         Console.WriteLine($"{winner.Name} wins!");
                     }
-                    break;
+                    goto Start;
+                    
 
                 case "2":
                     Environment.Exit(0);
