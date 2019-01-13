@@ -17,7 +17,14 @@ A fun tic tac toe game. Enter a number corresponding to which block you want to 
 ## Visual
 
 ### Menu
+![Menu Sample](./assets/menu.PNG)
 
 ### Sample Game Play
+![First Turn Sample](./assets/first_turn.PNG)
+![Game Play Sample](./assets/game_play.PNG)
 
 ### Winning Screen 
+![Winner Sample](./assets/winner.PNG)
+
+### Draw Screen
+![Draw Sample](./assets/draw.PNG)
