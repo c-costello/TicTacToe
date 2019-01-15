@@ -63,17 +63,29 @@ namespace tictactoeTests
             Assert.Equal(game.PlayerOne, game.NextPlayer());
 
         }
-        //    //TO DO - Find out why Assert.Equal isn't working
-        //[Fact]
-        //public void WillConvertNumbersToPosition()
-        //{
-        //    Player p1 = new Player();
-        //    Player p2 = new Player();
-        //    Game game = new Game(p1, p2);
-        //    Position assumed = new Position(0, 0);
-        //    Assert.Equal(assumed, Player.PositionForNumber(1));
 
-        //}
+        [Fact]
+        public void WillConvertNumbersToPositionRow()
+        {
+            Player p1 = new Player();
+            Player p2 = new Player();
+            Game game = new Game(p1, p2);
+
+            Position assumed = new Position(0,0);
+
+            Assert.Equal(assumed.Row, Player.PositionForNumber(1).Row);
+        }
+        [Fact]
+        public void WillConvertNumbersToPositionColumn()
+        {
+            Player p1 = new Player();
+            Player p2 = new Player();
+            Game game = new Game(p1, p2);
+
+            Position assumed = new Position(0, 0);
+
+            Assert.Equal(assumed.Column, Player.PositionForNumber(1).Column);
+        }
         [Fact]
         static void WillReturnGameBoard()
         {
